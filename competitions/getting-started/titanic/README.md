@@ -400,9 +400,9 @@ train[['Parch','Survived']].groupby(['Parch']).mean().plot.bar()
 
 结果分析:由图,可以看到年龄是影响生存情况的. 
 
-注：这里也能用上面的图，但是会挤在一起不便阅读
-
 但是年龄是有大部分缺失值的,缺失值需要进行处理,可以使用填充或者模型预测.
+
+注：这里也能用上面的图，但是会挤在一起不便阅读，所以下面介绍了热力图和折线图，不使用柱状图plot.bar()，
 
 ```python
 g = sns.FacetGrid(train, col='Survived',size=5)
